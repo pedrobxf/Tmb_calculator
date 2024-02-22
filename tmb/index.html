@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de TMB</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Calculadora de TMB</h1>
+        <p class="description">
+          A Taxa Metabólica Basal (TMB) é a quantidade mínima de energia que o corpo precisa para manter suas funções vitais em repouso.
+          Esta calculadora estima a TMB com base em fatores como peso, altura, idade, gênero, frequência de atividade física e percentual de gordura corporal.
+        </p>
+    <form id="tmbForm">
+      <label for="peso">Peso (kg):</label>
+      <input type="number" id="peso" name="peso" required>
+      <label for="altura">Altura (cm):</label>
+      <input type="number" id="altura" name="altura" required>
+      <label for="idade">Idade (anos):</label>
+      <input type="number" id="idade" name="idade" required>
+      <label for="genero">Gênero:</label>
+      <select id="genero" name="genero" required>
+        <option value="masculino">Masculino</option>
+        <option value="feminino">Feminino</option>
+      </select>
+      <label for="frequenciaAtividade">Frequência de Atividade Física:</label>
+      <input type="number" id="frequenciaAtividade" name="frequenciaAtividade" min="1" max="5" required>
+      <label for="percentualGordura">Percentual de Gordura Corporal:</label>
+      <input type="number" id="percentualGordura" name="percentualGordura" min="0" max="100" required>
+      <button type="button" onclick="calcularTMBResultado()">Calcular TMB</button>
+    </form>
+    <div id="resultado"></div>
+  </div>
+  <script src="formula.js"></script>
+  <a href="planilha_dieta.html" class="diet-link">Montar planilha de dieta</a>
+</body>
+</html>
